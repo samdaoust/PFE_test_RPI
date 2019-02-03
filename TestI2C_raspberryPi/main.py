@@ -27,7 +27,7 @@ while(count<bufferSize):
     bus.write_byte_data(DEVICE_ADDRESS, SI72XX_POWER_CTRL, POWER_CTRL__ONEBURST_MASK)
     bufferL = bus.read_byte_data(DEVICE_ADDRESS, SI72XX_DSPSIGL)
     bufferM = bus.read_byte_data(DEVICE_ADDRESS, SI72XX_DSPSIGM)
-    signal = bufferM<<8 | bufferL
+    signal = (bufferM & 0x7F) << 8 | bufferL
     #print(bufferM)
     #print(bufferL)
     #print(signal, "  " ,bufferM,  "  ",bufferL)
