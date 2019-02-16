@@ -1,2 +1,2 @@
-# PFE_uC (versuib RPi)
+# PFE_uC (version RPi)
 code pour le microcontrolleur du PFE
